@@ -1,0 +1,18 @@
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  animation: walk 10s linear infinite;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes walk {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}

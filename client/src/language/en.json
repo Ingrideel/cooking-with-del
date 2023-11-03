@@ -1,0 +1,19 @@
+{
+  "add": "Add",
+  "addRecipe": "Add Recipe",
+  "anotherOne": "Another one?",
+  "finish": "Finish",
+  "finished": "Finished",
+  "goToSteps": "Go to steps",
+  "back": "Back",
+  "ingredientsList": "Ingredients list",
+  "language": {
+    "en-GB": "English",
+    "ro-RO": "Romanian"
+  },
+  "nextStep": "Next step",
+  "recipe": "Recipe",
+  "recipes": "Recipes",
+  "select": "Select",
+  "step": "Step"
+}

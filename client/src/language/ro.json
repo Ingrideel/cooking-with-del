@@ -1,0 +1,19 @@
+{
+  "add": "Adaugă",
+  "addRecipe": "Adaugă Rețetă",
+  "anotherOne": "Încă una?",
+  "finish": "Finalizează",
+  "finished": "Finalizată",
+  "goToSteps": "Mergi către pași",
+  "back": "Înapoi",
+  "ingredientsList": "Lista cu ingrediente",
+  "language": {
+    "en-GB": "Englzeză",
+    "ro-RO": "Română"
+  },
+  "nextStep": "Următorul pas",
+  "recipe": "Rețetă",
+  "recipes": "Rețete",
+  "select": "Selectează",
+  "step": "Pasul"
+}

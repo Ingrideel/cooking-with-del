@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Recipe {
+  id                 Int                  @id @default(autoincrement())
+  imgFileName        String
+  imgSrc             String
+  name               String               @unique
+  label              String
+  ingredientInRecipe IngredientInRecipe[]
+  stepForRecipe      StepForRecipe[]
+}
+
+model Ingredient {
+  id                 Int                  @id @default(autoincrement())
+  name               String               @unique
+  label              String
+  ingredientInRecipe IngredientInRecipe[]
+}
+
+model IngredientInRecipe {
+  ingredient   Ingredient @relation(fields: [ingredientId], references: [id])
+  ingredientId Int
+  recipe       Recipe     @relation(fields: [recipeId], references: [id])
+  recipeId     Int
+  quantity     Float?     @db.Real
+  unit         String?
+
+  @@id([ingredientId, recipeId])
+}
+
+model Step {
+  id            Int             @id @default(autoincrement())
+  index         Int
+  description   String
+  label         String
+  stepForRecipe StepForRecipe[]
+}
+
+model StepForRecipe {
+  step     Step   @relation(fields: [stepId], references: [id])
+  stepId   Int
+  recipe   Recipe @relation(fields: [recipeId], references: [id])
+  recipeId Int
+
+  @@id([stepId, recipeId])
+}
