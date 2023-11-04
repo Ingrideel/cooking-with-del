@@ -10,12 +10,7 @@ import {
   Title,
 } from "@mantine/core";
 
-import {
-  useSearch,
-  useParams,
-  useNavigate,
-  Link,
-} from "@tanstack/react-router";
+import { useSearch, useParams, Link } from "@tanstack/react-router";
 import { useQuery } from "react-query";
 import { useTranslation } from "react-i18next";
 
@@ -27,7 +22,6 @@ import style from "./Recipe.module.scss";
 const Recipe: React.FC = () => {
   const { id } = useParams({ from: recipeRoute.id });
   const { step } = useSearch({ from: recipeRoute.id });
-  const navigate = useNavigate({ from: recipeRoute.id });
 
   const { t } = useTranslation();
 
@@ -35,17 +29,6 @@ const Recipe: React.FC = () => {
   const recipe = recipesQuery.data?.find(
     (recipe) => recipe.id === parseInt(id)
   );
-
-  const nextStep = () =>
-    navigate({
-      params: { id },
-      search: (prev) => ({ step: prev.step + 1 }),
-    });
-  const prevStep = () =>
-    navigate({
-      params: { id },
-      search: (prev) => ({ step: prev.step - 1 }),
-    });
 
   return (
     <Container>
