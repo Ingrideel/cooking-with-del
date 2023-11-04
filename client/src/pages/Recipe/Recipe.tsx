@@ -68,11 +68,32 @@ const Recipe: React.FC = () => {
       </Center>
 
       <Button.Group mt="xl" className={style.buttonGroup}>
-        <Button variant="default" onClick={prevStep} disabled={step === 0}>
+        <Button
+          variant="default"
+          renderRoot={(props) => (
+            <Link
+              params={{ id }}
+              search={(prev) => ({
+                step: (prev.step || 1) - 1,
+              })}
+              {...props}
+            />
+          )}
+          disabled={step === 0}
+        >
           {t("back")}
         </Button>
+
         <Button
-          onClick={nextStep}
+          renderRoot={(props) => (
+            <Link
+              params={{ id }}
+              search={(prev) => ({
+                step: (prev.step || 0) + 1,
+              })}
+              {...props}
+            />
+          )}
           disabled={recipe && step === recipe?.steps.length - 1}
           w={150}
         >
@@ -83,11 +104,13 @@ const Recipe: React.FC = () => {
               ? t("finished")
               : t("finish"))}
         </Button>
-        <Link to="/recipes">
-          <Button disabled={recipe && step !== recipe?.steps.length - 1}>
-            {t("anotherOne")}
-          </Button>
-        </Link>
+
+        <Button
+          renderRoot={(props) => <Link to="/recipes" {...props} />}
+          disabled={recipe && step !== recipe?.steps.length - 1}
+        >
+          {t("anotherOne")}
+        </Button>
       </Button.Group>
 
       <Space h={80} />

@@ -22,7 +22,6 @@
     "baseUrl": ".",
     "paths": {
       "src/*": ["src/*"],
-      "assets/*": ["./assets/*"],
       "components/*": ["src/components/*"],
       "context/*": ["src/context/*"],
       "router/*": ["src/router/*"],

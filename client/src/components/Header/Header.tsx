@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
     <AppShell.Header px="md" className={style.container}>
       <Group justify="space-between" w="100%">
         <Link to="/" className={style.link}>
-          <Text>Cooking with Del</Text>
+          <Text ff="Shantell Sans, cursive">Cooking with Del</Text>
         </Link>
 
         <Group>

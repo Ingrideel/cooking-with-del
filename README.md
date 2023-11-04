@@ -1,13 +1,45 @@
-# React + TypeScript + Vite
+# Cooking with Del
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O aplicatie web unde poti gasi retete pentru a incerca lucruri noi in bucatarie
 
-Currently, two official plugins are available:
+## Applications
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Client
 
-## Expanding the ESLint configuration
+**Prerequisites**
+
+1. Install the NodeJs runtime
+   - [Download link](https://nodejs.org/en/download/current)
+   - or using [nvm](https://github.com/nvm-sh/nvm)
+2. Open the client folder into the terminal
+
+```
+cd client
+```
+
+3. Install the dependencies
+
+using npm
+
+```
+npm install
+```
+
+or by using yarn
+
+```
+yarn install
+```
+
+or by using pnpm
+
+```
+pnpm install
+```
+
+1. John Quincy Adams
+
+### Server
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 

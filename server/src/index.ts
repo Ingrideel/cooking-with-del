@@ -10,7 +10,7 @@ import { getRecipes, getRecipesCount } from "./db/recipes";
 const app = express();
 const port = process.env.PORT || 3000;
 
-const whitelist = ["http://localhost:5173"];
+const whitelist = ["http://localhost:4173", "http://localhost:5173"];
 
 app.use(
   cors({

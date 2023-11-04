@@ -24,7 +24,6 @@ i18n
   .use(LanguageDetector)
   .init({
     resources,
-    debug: true,
     fallbackLng: LANGUAGES.ENGLISH,
     compatibilityJSON: "v3",
     interpolation: {

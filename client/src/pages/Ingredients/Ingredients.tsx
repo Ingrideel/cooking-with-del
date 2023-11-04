@@ -3,7 +3,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import { useParams } from "@tanstack/react-router";
 import { useQuery } from "react-query";
 
-import "@dotlottie/player-component";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 import { RecipesQueries, getRecipes } from "src/api/getRecipes";
 import { recipeRoute } from "src/routes/routes";
@@ -22,8 +22,8 @@ export const IngredientsPage: React.FC = () => {
     <Container>
       <Group justify="center" align="center">
         {!isMobile ? (
-          <dotlottie-player
-            src="../../assets/animations/pan_red.lottie"
+          <Player
+            src="/pan_red.json"
             autoplay
             loop
             style={{ height: 700, width: 150 }}
@@ -38,8 +38,8 @@ export const IngredientsPage: React.FC = () => {
             recipeId={recipe.id}
           />
         ) : (
-          <dotlottie-player
-            src="../../assets/animations/bowl.lottie"
+          <Player
+            src="/bowl.json"
             autoplay
             loop
             style={{ height: 400, width: 400 }}
@@ -47,8 +47,8 @@ export const IngredientsPage: React.FC = () => {
         )}
 
         {!isMobile ? (
-          <dotlottie-player
-            src="../../assets/animations/pan_yellow.lottie"
+          <Player
+            src="/pan_yellow.json"
             autoplay
             loop
             style={{

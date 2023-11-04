@@ -14,8 +14,12 @@ const App: React.FC = () => {
           <Outlet />
         </AppShell.Main>
       </AppShell>
-      <TanStackRouterDevtools />
-      <ReactQueryDevtools position="bottom-right" />
+      {import.meta.env.DEV ? (
+        <>
+          <TanStackRouterDevtools />
+          <ReactQueryDevtools position="bottom-right" />
+        </>
+      ) : null}
     </>
   );
 };

@@ -2,18 +2,17 @@ import { Button, Container, Stack } from "@mantine/core";
 import { IconArrowRight, IconChefHat } from "@tabler/icons-react";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 import { WalkingFriends } from "src/components/WalkingFriends/WalkingFriends";
-
-import "@dotlottie/player-component";
 
 export const Home: React.FC = () => {
   const { t } = useTranslation();
   return (
     <Container>
       <Stack align="center" justify="center" my="xl">
-        <dotlottie-player
-          src="assets/animations/cooking.lottie"
+        <Player
+          src="/cooking.json"
           autoplay
           loop
           style={{ height: 300, width: 600 }}

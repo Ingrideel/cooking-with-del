@@ -1,11 +1,11 @@
-import "@dotlottie/player-component";
+import { Player } from "@lottiefiles/react-lottie-player";
 import style from "./WalkingFriends.module.scss";
 
 const FRIENDS_SRC = [
-  "assets/animations/walink_eggplant.lottie",
-  "assets/animations/walking_carrot.lottie",
-  "assets/animations/walking_garlic.lottie",
-  "assets/animations/walking_pumpkin.lottie",
+  "/walink_eggplant.json",
+  "/walking_carrot.json",
+  "/walking_garlic.json",
+  "/walking_pumpkin.json",
 ];
 
 interface WalkingFriendsProps {
@@ -36,7 +36,7 @@ export const WalkingFriends: React.FC<WalkingFriendsProps> = ({
   return (
     <div className={`${style.container}${` ${className}` || ""}`}>
       {FRIENDS_SRC.map((src, index) => (
-        <dotlottie-player
+        <Player
           key={index}
           src={src}
           {...playerProps(index)}
