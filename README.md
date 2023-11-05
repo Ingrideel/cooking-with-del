@@ -1,6 +1,6 @@
 # Cooking with Del
 
-O aplicatie web unde poti gasi retete pentru a incerca lucruri noi in bucatarie
+A web app where you can find new recipes to try in the kitchen.
 
 ## Applications
 
